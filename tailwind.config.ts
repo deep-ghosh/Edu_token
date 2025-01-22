@@ -8,10 +8,12 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+       colors: {
+         'light-blue': '#3a8ff5',
+       },
+       animation: {
+         pulse: 'pulse 2s infinite',
+     },
     },
   },
   plugins: [],
