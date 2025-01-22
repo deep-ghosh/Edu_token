@@ -44,7 +44,7 @@ export function BalanceDisplay({ account }: BalanceDisplayProps) {
 
         // Verify network connection
         const network = await provider.getNetwork();
-        if (network.chainId !== 59141n) {
+        if (network.chainId !== BigInt(59141)) {
           // Linea Sepolia chainId
           setError("Please connect to Linea Sepolia network");
           return;
@@ -63,8 +63,8 @@ export function BalanceDisplay({ account }: BalanceDisplayProps) {
           error instanceof Error ? error.message : "Failed to fetch balance"
         );
       }
-    };
 
+    };
     fetchBalance();
   }, [account]);
 
